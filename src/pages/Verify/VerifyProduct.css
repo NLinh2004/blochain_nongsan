@@ -1,0 +1,126 @@
+/* src/pages/Verify/VerifyProduct.css */
+.page-wrapper {
+  background-color: #f3f4f6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.verify-container {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Loading */
+.verify-loading {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #2E7D32;
+}
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #2E7D32;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+/* Error Card */
+.error-card {
+  background: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  text-align: center;
+  border-top: 5px solid #dc2626;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+.icon-warning { font-size: 4rem; margin-bottom: 10px; }
+.error-card h2 { color: #dc2626; margin-bottom: 10px; }
+.btn-home { margin-top: 20px; padding: 10px 20px; background: #333; color: white; border: none; border-radius: 8px; cursor: pointer; }
+
+/* Product Card (Main) */
+.product-card {
+  background: white;
+  width: 100%;
+  max-width: 480px; /* Kích thước chuẩn màn hình điện thoại */
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  border: 1px solid #e5e7eb;
+}
+
+/* Header Xanh Lá */
+.status-header.verified {
+  background: linear-gradient(135deg, #2E7D32 0%, #4ade80 100%);
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.shield-icon { font-size: 2.5rem; }
+.status-header h3 { margin: 0; font-size: 1.1rem; }
+.status-header small { opacity: 0.9; font-size: 0.85rem; }
+
+/* Thông tin chung */
+.product-info-section {
+  padding: 25px;
+  text-align: center;
+}
+.product-img { width: 100px; height: 100px; object-fit: contain; margin-bottom: 15px; }
+.product-name { font-size: 1.5rem; color: #1f2937; margin-bottom: 5px; }
+.product-origin { color: #6b7280; font-weight: 500; }
+
+.divider { border: 0; border-top: 1px dashed #e5e7eb; margin: 0 20px; }
+
+/* Lưới thông tin */
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  padding: 20px;
+}
+.detail-item { background: #f9fafb; padding: 10px; border-radius: 8px; }
+.detail-item.full { grid-column: span 2; background: #ecfdf5; border: 1px solid #d1fae5; }
+.label { display: block; font-size: 0.8rem; color: #6b7280; margin-bottom: 4px; }
+.value { font-weight: 600; color: #374151; font-size: 0.95rem; }
+.value.hash { font-family: monospace; color: #059669; word-break: break-all; }
+
+/* Khu vực Chứng chỉ */
+.cert-section { padding: 0 20px 20px; }
+.cert-section h4 { color: #2E7D32; margin-bottom: 15px; border-left: 4px solid #2E7D32; padding-left: 10px; }
+.cert-list { display: flex; flex-direction: column; gap: 10px; }
+.cert-badge {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  transition: transform 0.2s;
+}
+.cert-badge:hover { transform: translateX(5px); border-color: #2E7D32; }
+.cert-icon { font-size: 1.5rem; }
+.cert-info strong { display: block; color: #374151; }
+.cert-info span { font-size: 0.85rem; color: #9ca3af; }
+
+/* Timeline */
+.timeline-section { padding: 0 20px 30px; }
+.timeline-section h4 { color: #2E7D32; margin-bottom: 15px; border-left: 4px solid #2E7D32; padding-left: 10px; }
+.timeline { list-style: none; padding-left: 10px; border-left: 2px solid #e5e7eb; margin-left: 10px; }
+.timeline-item { position: relative; padding-left: 20px; margin-bottom: 20px; }
+.timeline-item::before {
+  content: ''; position: absolute; left: -6px; top: 5px;
+  width: 10px; height: 10px; background: #2E7D32; border-radius: 50%;
+}
+.timeline-item .time { display: block; font-size: 0.8rem; color: #9ca3af; margin-bottom: 2px; }
+.timeline-item .event { font-weight: 500; color: #4b5563; }

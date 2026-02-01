@@ -1,0 +1,79 @@
+/* src/pages/Login/Login.css */
+:root {
+  --primary-green: #2E7D32; /* Xanh lá đậm - Tin cậy */
+  --hover-green: #1B5E20;   /* Xanh đậm hơn khi hover */
+  --bg-color: #F3F4F6;      /* Xám rất nhạt làm nền */
+  --white: #FFFFFF;
+  --text-main: #1F2937;
+  --text-sub: #6B7280;
+  --error: #EF4444;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.login-card {
+  background: var(--white);
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Bóng đổ nhẹ hiện đại */
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.logo-section h1 {
+  color: var(--primary-green);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+}
+
+.logo-section p {
+  color: var(--text-sub);
+  margin-bottom: 2.5rem;
+}
+
+.btn-login {
+  width: 100%;
+  padding: 14px;
+  background-color: var(--primary-green);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-login:hover {
+  background-color: var(--hover-green);
+  transform: translateY(-1px);
+}
+
+.btn-login:disabled {
+  background-color: #9CA3AF;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.error-box {
+  margin-top: 1rem;
+  padding: 10px;
+  background-color: #FEF2F2;
+  color: var(--error);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  border: 1px solid #FECACA;
+}
