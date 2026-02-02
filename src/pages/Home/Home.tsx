@@ -148,7 +148,7 @@ const Home: React.FC = () => {
               {/* Cột QR */}
               <div style={{ flex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
                 <img 
-                    src={`https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=${encodeURIComponent('https://<project-name>.vercel.app/verify?id=' + result.id)}`}
+src={`https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=${encodeURIComponent('https://blockchain-nongsan.vercel.app/verify?id=' + result.id)}`}
                     alt="QR Code"
                     style={{ borderRadius: '8px', border: '4px solid white', boxShadow: '0 2px 10px rgba(0,0,0,0.1)' }} 
                 />
